@@ -1,0 +1,19 @@
+{
+  "name": "mastermind",
+  "version": "0.0.0",
+  "homepage": "https://github.com/WDI-HK-8/mastermind",
+  "authors": [
+    "heiheychan"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lightbox2": "~2.8.1"
+  }
+}

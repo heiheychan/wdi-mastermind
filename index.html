@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The classic board game - mastermind">
+    <meta name="author" content="Kill Bill">
+    <!-- Stylesheets -->
+    <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bower_components/lightbox2/dist/css/lightbox.css">
+    <link rel="stylesheet" type="text/css" href="assets/qtip/jquery.qtip.min.css">
+    <!-- Script -->
+    <script src="assets/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/qtip/jquery.qtip.min.js"></script>
+    <script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/application.js"></script>
+  </head>
+  <body>
+    <div class="wrapper col-lg-12">
+      <section class="quesWrapper col-lg-9">
+          <h1>Master Mind</h1>
+          <!-- Later Shown -->
+          <div class="instruction col-lg-12">
+            <h1>Instructions</h1>
+            <ul>
+              <li>
+                Two players to start the game and take turn
+              </li>
+              <li>
+                Four color balls will be randomly generated as the answer
+                <div class="iBullets">
+                  <div class="instructBullet greenColor"></div>
+                  <div class="instructBullet purpleColor"></div>
+                  <div class="instructBullet blueColor"></div>
+                  <div class="instructBullet coralColor"></div>
+                </div>
+              </li>
+              <li class="clear">
+                Each turn, player get to pick four color dots which hopefully look the same as the answer
+              </li>
+              <li>
+                At the end of each turn, hints will be provided:
+                <ul class="hintInstruction">
+                  <li>
+                    <span style="color: #98C73D;">green</span> colored dot for correct color with correct place
+                  </li>
+                  <li>
+                    <span style="color: #EAFF31;">yellow</span> colored dot for correct color but wrong place
+                  </li>
+                  <li>
+                    <span style="color: crimson">red</span> colored dot for utterly wrong answer!
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Have fun!
+              </li>
+            </ul>
+          </div>
+          <div class="startGameRow col-lg-12">
+            <input class="p1Name col-lg-3" placeholder="Player One's Name">
+            <input class="p2Name col-lg-3" placeholder="Player Two's Name">
+            <!-- Later Remove -->
+            <button class="getStarted col-lg-2">START</button>
+          </div>
+          <!-- Display when the game starts -->
+          <table class="col-lg-12 table table-hover answerDisplay" style="display: none"> 
+            <tr class="inputName"> 
+              <th>TURN</th> 
+              <th>
+                <span class="glyphicon glyphicon glyphicon-tint"></span>
+              </th> 
+              <th>
+                <span class="glyphicon glyphicon-star"></span>
+              </th> 
+              <th>
+                <span class="glyphicon glyphicon-leaf"></span>
+              </th> 
+              <th>
+                <span class="glyphicon glyphicon-fire"></span>
+              </th> 
+              <th>HINT
+              <a href="assets/image/howToReadHint.png" data-lightbox="howToReadHint" data-title="NOTICE: the sequence of the hint circles will be randomized!"><button class="confused">Confused?</button></a>
+              </th> 
+            </tr> 
+            <tr class="answerList"> 
+              <td> 
+                <p class="turnNum">1</p> 
+              </td> 
+              <td> 
+                <div class="ansBullet whiteColor"></div> 
+              </td> 
+              <td> 
+                <div class="ansBullet whiteColor"></div> 
+              </td> 
+              <td> 
+                <div class="ansBullet whiteColor"></div> 
+              </td> 
+              <td> 
+                <div class="ansBullet whiteColor"></div> 
+              </td> 
+              <td> 
+                <div class="hintBullet greyColor"></div> 
+                <div class="hintBullet greyColor"></div> 
+                <div class="hintBullet greyColor"></div> 
+                <div class="hintBullet greyColor"></div> 
+              </td>
+            </tr>
+          </table>
+          <div class="easyAnswer col-lg-1" style="display: none">
+            <div class="easyAnswerBullet blueColor">1</div>
+            <div class="easyAnswerBullet blackColor">2</div>
+            <div class="easyAnswerBullet coralColor">3</div>
+            <div class="easyAnswerBullet purpleColor">4</div>
+            <div class="easyAnswerBullet greenColor">5</div>
+          </div>
+          <div class="flyingBullets" style="display: none">
+            <div class="flyingBullet blueColor">1</div> 
+            <div class="flyingBullet blackColor">2</div> 
+            <div class="flyingBullet coralColor">3</div> 
+            <div class="flyingBullet purpleColor">4</div>
+            <div class="flyingBullet greenColor">5</div> 
+          </div>
+      </section>
+      <section class="ansWrapper col-lg-3">
+        <h3 class="whoseTurn">Whoever,</h3>
+        <p class="yourTurn">just click the Start Button!</p>
+        <div class="ansBox">
+          <div class="input-group-addon">
+            <span class="glyphicon glyphicon-tint"></span>
+          </div>
+          <input type="text" class="answer form-control" id="exampleInputAmount" placeholder="Make a guess!" disabled="true" style="display: none">
+          <ul class="reference">
+            <li>
+              <div class="pressA" >Blue</div>
+              <p><span>enter</span>1</p>
+            </li>
+            <li>
+              <div class="pressB">Black</div>
+              <p><span>enter</span>2</p>
+            </li>
+            <li>
+              <div class="pressC">Orange</div>
+              <p><span>enter</span>3</p>
+            </li>
+            <li>
+              <div class="pressD">Purple</div>
+              <p><span>enter</span>4</p>
+            </li>
+             <li>
+              <div class="pressE">Green</div>
+              <p><span>enter</span>5</p>
+            </li>
+            <li>
+              <h3 class="refHint">Hint Circles</h3>
+            </li>
+            <li>
+              <div class="correct"></div>
+              <p>Correct Color and Place!</p>
+            </li>
+            <li>
+              <div class="partialCorrect"></div>
+              <p>Correct Color but wrong place!</p>
+            </li>
+            <li>
+              <div class="inCorrect"></div>
+              <p>Wrong Wrong Wrong!</p>
+            </li>
+          </ul>
+      </section>
+    </div>
+    <script src="bower_components/lightbox2/dist/js/lightbox.min.js"></script>
+  </body>
+</html>

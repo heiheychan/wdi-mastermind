@@ -1,0 +1,497 @@
+/*High Level*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	padding:20px 100px 0px 100px;
+	background-color: powderblue;
+	min-height: 1100;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+/*List Choice Section*/
+/*h1 and name input*/
+.quesWrapper {
+	padding: 5px 10px 5px 20px;
+	background-color: white;
+	min-height: 1100px;
+}
+
+.quesWrapper h1 {
+	font-size: 45px;
+	color: black;
+}
+
+.startGameRow {
+	margin-top: 30px;
+}
+
+.ftw {
+	color: LightSlateGray;
+}
+
+.startGameRow input {
+	margin-bottom: 5px;
+	border: 1px solid lightgrey;
+	height: 35px;
+	margin-right: 5px; 
+	color: darkgrey;
+}
+
+.startGameRow button {
+	height: 35px;
+	border: none;
+	background-color: MediumSeaGreen;
+	color: white;
+}
+
+/*Table!!!!!!!!!!!!!!!*/
+.answerList td:not(:last-child){
+	border-right: 1px dotted white;
+}
+
+.answerDisplay {
+	margin-top: 20px;
+	border: none;
+	background-color: powderblue;
+	margin-bottom: 0;
+}
+
+.answerDisplay tr {
+	height: 50px;
+}
+
+.answerDisplay .inputName th {
+	padding-top: 12px;
+	font-size: 18px;
+	border-bottom: 2px solid white;
+}
+
+.answerDisplay .answerList td {
+	padding-top: 14px;
+	font-size: 15px;
+	border-bottom: 1px dashed white;
+}
+
+/*The answer input side*/
+.ansWrapper {
+	background-color: white;
+	padding: 5px 15px 5px 15px;
+	height: 1100px;
+	width: 250px;
+	margin-left: 5px;
+}
+
+h3.whoseTurn {
+	font-size: 45px;
+	color: black;
+	margin-top: 50px;
+}
+
+.ansWrapper .yourTurn {
+	font-size: 20px;
+	color: LightSlateGray;
+}
+
+.ansWrapper .ansBox {
+	margin-top: 10px;
+}
+
+.ansWrapper .ansBox .input-group-addon {
+	border: none;
+	border-radius: 0;
+	height: 50px;
+	border: 1px solid lightgrey;
+	border-bottom: 2px solid darkgrey;
+}
+
+.ansWrapper .ansBox .answer {
+	height: 100px;
+	font-size: 50px;
+	border: 1px solid lightgrey;
+	border-radius: 0;
+	text-align: center;
+}
+
+.answer::-webkit-input-placeholder { 
+	color:lightgrey;
+	font-size: 60%;
+	padding-top: 10px;
+ }
+
+ .answer::-moz-placeholder {
+	color:lightgrey;
+	font-size: 60%;
+	padding-top: 10px;
+ }
+
+ .submitAns {
+ 	width: 100%;
+ 	height: 50px;
+ 	background-color: MediumSeaGreen;
+ 	color: white;
+ 	border: none;
+ 	border-top: 2px solid darkgrey;
+ }
+
+ .reference {
+ 	width: 100%;
+ 	height: 700px;
+ 	background-color: MintCream;
+ 	padding: 10px;
+ 	padding-top: 20px;
+ }
+
+ .reference li {
+ 	clear: both;
+ 	width: 100%;
+ 	height: 50px;
+ 	margin-top: 10px;
+ 	border-bottom: 1px dotted lightgrey;
+ }
+
+ .reference li div {
+ 	float: left;
+ 	margin-top: 15px;
+ }
+ 
+ .reference li:nth-child(-n+5) p {
+ 	float: right;
+ 	font-size: 35px;
+ 	margin: 0;
+ 	margin-bottom: 10px;
+ }
+
+ .reference li:nth-child(-n+5) span {
+ 	font-size: 18px;
+ 	display: inline-block;
+ 	margin-right: 5px;
+ 	color: grey;
+ }
+
+  .reference li:nth-child(n+6) p {
+ 	float: right;
+ 	font-size: 12px;
+ 	margin: 0;
+ 	margin-bottom: 10px;
+ 	margin-top: 10px;
+ 	width: 50%;
+ }
+
+
+/*Show Answer Tab*/
+.showAnsRow {
+	width: 880px;
+	position: fixed;
+	bottom: 0;
+	background-color: white;
+	text-align: left;
+	height: 50px;
+	z-index: 9998;
+}
+
+.showAnsRow .showAns {
+	border: none;
+	background-color: tomato;
+	color: white;
+	margin-top: 10px;
+	padding: 5px;
+	float: left;
+}
+
+.solutionCircle {
+	float: left;
+	margin-left: 10px;
+	padding: 5px;
+	padding-top: 15px;
+	margin-right: 10px;
+}
+
+.solutionBullet {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	float: left;
+	margin-left: 5px;
+}
+
+
+/*Color*/
+.whiteColor {
+	background-color: white;
+}
+
+.greyColor {
+	background-color: darkgrey;
+}
+
+.blueColor {
+	background-color: DodgerBlue;
+}
+
+.blackColor {
+	background-color: Black;
+}
+
+.coralColor {
+	background-color: Coral;
+}
+
+.purpleColor {
+	background-color: DarkOrchid;
+}
+
+.greenColor {
+	background-color: Green;
+}
+
+/*All the div in the reference list*/
+.pressA, .pressB, .pressC, .pressD, .pressE {
+	float: left;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	color: white;
+	text-transform: uppercase;
+	font-size: 10px;
+	padding-top: 23px;
+	text-align: center;
+}
+
+.pressA {
+	background-color: DodgerBlue;
+}
+
+.pressB {
+	background-color: Black;
+}
+
+.pressC {
+	background-color: Coral;
+}
+
+.pressD {
+	background-color: DarkOrchid;
+}
+
+.pressE {
+	background-color: Green;
+}
+
+.correct {
+	background-color: #98C73D;
+	float: left;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+}
+
+.colorTomato {
+	background-color: #98C73D;
+}
+
+.partialCorrect {
+	background-color: #EAFF31;
+	float: left;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+}
+
+.colorSalmon {
+	background-color: #EAFF31;
+}
+
+.inCorrect {
+	background-color: crimson;
+	float: left;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+}
+
+.crimson {
+	background-color: crimson;
+}
+
+/*Bullet type*/
+.hintBullet {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	float: left;
+	margin-right: 5px;
+	margin-top: 4px;
+}
+
+
+.ansBullet {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+/*The game ended!*/
+.championWrapper {
+	width: 100%;
+	padding: 200px;
+	padding-top: 100px;
+	padding-bottom: 0;
+	background-color: lightblue;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.champion {
+	font-size: 160px;
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.championText {
+	font-size: 60px;
+	color: steelblue;
+	margin-top: 5px;
+	padding-bottom: 340px;
+}
+
+/* Instruction */
+.instruction {
+	margin-top: 15px;
+	padding-left: 50px;
+	padding-top: 30px;
+	background-color: MintCream;
+	height: 600px;
+}
+
+.instruction h1 {
+	margin-bottom: 25px;
+}
+
+.instruction li {
+	list-style: lower-roman;
+	font-size: 23px;
+	margin-top: 15px;
+}
+
+.hintInstruction {
+	padding-left: 60px;
+}
+
+.hintInstruction li {
+	font-size: 18px;
+}
+
+.iBullets .instructBullet {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	float: left;
+	margin-top: 15px;
+	margin-bottom: 8px;
+	margin-right: 8px;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/*Confused button*/
+.confused {
+	width: 120px;
+	height: 26px;
+	margin-left: 10px;
+	background-color: MediumSeaGreen;
+	border-radius: 3px;
+	border: none;
+	color: white;
+	font-weight: normal;
+	padding-bottom: 10px;
+}
+
+/*ref Hint Circles*/
+.refHint {
+	margin-top: 60px;
+}
+
+/*Easy Answer! yay!*/
+.easyAnswer {
+	height: 200px;
+	width: 95px;
+	background-color: powderblue;
+	margin-left: 135px;
+	padding-left: 8px;
+	border: 1px dashed whitesmoke;
+	padding-top: 10px;
+	border-top: none;
+	margin-bottom: 200px;
+}
+
+.easyAnswer .easyAnswerBullet {
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	padding-top: 5px;
+	color: white;
+
+}
+
+/*Winner Bullet*/
+.championText {
+	padding-bottom: 10px;
+}
+
+.winnerBulletWrapper {
+	display: block;
+	width: 100%;
+	height: 350px;
+	padding-left: 280px;
+	padding-top: 30px;
+	text-align: center;
+}
+
+
+.winnerBullet {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	float: left;
+	margin: 5px 10px 5px 10px;
+}
+
+/*Flying Bullet*/
+.flyingBullet {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	text-align: center;
+	padding-top: 20px;
+	color: white;
+	position: fixed;
+	z-index: 9997;
+}
+
+/*Need for speed*/
+.needForSpeed {
+	float: left;
+	display: inline-block;
+	width: 150px;
+	margin-top: 15px;
+}
+
+input[type="range"].changeSpeed {
+	float: left;
+	display: inline-block;
+	width: 200px;
+	margin-top: 18px;
+}
